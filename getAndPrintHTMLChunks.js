@@ -1,5 +1,7 @@
 var https = require('https');
 
+function getAndPrintHTMLChunks() {
+
 var requestOptions = {
   host: 'sytantris.github.io',
   path: "/http-examples/step1.html"
@@ -20,9 +22,5 @@ https.get(requestOptions, function(response) {
     console.log("Response stream complete")
   })
 
-  // callback is invoked when all of the data has been written
-  response.on("finish", function(finish) {
-    console.log("All of the data has been written")
   })
-
-})
+}
